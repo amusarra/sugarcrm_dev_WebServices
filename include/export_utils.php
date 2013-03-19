@@ -299,6 +299,9 @@ function export($type, $records = null, $members = false, $sample=false) {
                             $value = implode(",",$valueArray);
                         }
                         break;
+                    case 'text':
+                    	$value = trim(preg_replace('/\s\s+/', ' ', $value));
+                    	break;
                 }
             }
 
